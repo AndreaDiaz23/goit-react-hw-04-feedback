@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Statistics from './Statistics';
-import Feedback from './Feedback';
-import Section from './Section.jsx';
-import Notification from './Notification.jsx';
+import FeedbackOptions from './FeedbackOptions';
+import Section from './Section';
+import Notification from './Notification';
 
 function App() {
   const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
       <Section title="Leave Feedback">
-        <Feedback options={['good', 'neutral', 'bad']} onLeaveFeedback={incrementFeedback} />
+        <FeedbackOptions options={['good', 'neutral', 'bad']} onLeaveFeedback={incrementFeedback} />
       </Section>
       <Section title="Statistics">
         {total > 0 ? (
@@ -35,22 +35,3 @@ function App() {
 }
 
 export default App;
-
-
-/* export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
- */

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Feedback = ({ options, onLeaveFeedback }) => {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div>
       {options.map(option => (
@@ -12,4 +12,4 @@ const Feedback = ({ options, onLeaveFeedback }) => {
   );
 }
 
-export default Feedback;
+export default FeedbackOptions;
